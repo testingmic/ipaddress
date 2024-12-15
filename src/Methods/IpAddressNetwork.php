@@ -1,6 +1,6 @@
 <?php
 
-namespace testingmic\bin;
+namespace Testingmic\Methods;
 
 class IpAddressNetwork
 {

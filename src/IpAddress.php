@@ -1,9 +1,10 @@
 <?php
 
-namespace testingmic;
+namespace Testingmic;
 
-use testingmic\bin\IpAddressDatabase;
-use testingmic\bin\IpAddressNetwork;
+use Testingmic\Methods\IpAddressDatabase;
+use Testingmic\Methods\IpAddressNetwork;
+
 class IpAddress
 {
     /**
