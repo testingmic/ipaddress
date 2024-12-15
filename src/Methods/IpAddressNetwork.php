@@ -14,7 +14,7 @@ class IpAddressNetwork
      *
      * @param string $ipAddress
      */
-    public function __construct(string $ipAddress=null)
+    public function __construct($ipAddress = null)
     {
         $ipAddress || $ipAddress = $this->getIPAddress();
         $this->validateAddress($ipAddress);
@@ -72,7 +72,7 @@ class IpAddressNetwork
      * @param string $ipAddress
      * @return int
      */
-    public function ip2Integer(string $ipAddress)
+    public function ip2Integer($ipAddress = null)
     {
         $ipAddress = $this->expandAddress($ipAddress);
         if (strpos($ipAddress, ':') !== false):
@@ -106,7 +106,7 @@ class IpAddressNetwork
      * @param string $ipAddress
      * @return integer
      */
-    public function ipVersion(string $ipAddress)
+    public function ipVersion($ipAddress = null)
     {
         $ipAddress || $ipAddress = $this->getIPAddress();
         try
@@ -125,7 +125,7 @@ class IpAddressNetwork
      * @param string $ipAddress
      * @return bool
      */
-    public function isIpAddress(string $ipAddress)
+    public function isIpAddress($ipAddress = null)
     {
         $ipAddress || $ipAddress = $this->getIPAddress();
         if (filter_var($ipAddress, FILTER_VALIDATE_IP, [FILTER_FLAG_IPV4|FILTER_FLAG_IPV6]) !== false):
