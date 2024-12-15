@@ -18,7 +18,7 @@ there are two options:
 
 ```php
 
-composer require testingmic/geoip2country
+composer require testingmic/ipaddress
 
 ```
 
