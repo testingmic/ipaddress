@@ -40,6 +40,7 @@ class IpAddressDatabase
                     \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
                     \PDO::ATTR_EMULATE_PREPARES   => false,
                 ];
+            $database = dirname(__DIR__, 1) . "/data/{$database}";
             $this->oPDOInstance = new \PDO($this->genDsn($database), null, null, $aOptions);
             $this->initialize();
         } catch (\Throwable $th) {
